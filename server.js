@@ -14,6 +14,11 @@ mongoose.connect("mongodb://127.0.0.1:27017/collegeDB")
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
 
+  app.get("/", (req, res) => {
+  res.send("Backend API is running successfully 🚀");
+});
+
+
 // Schema + Model
 const contactSchema = new mongoose.Schema({
   name: String,
